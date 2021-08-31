@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'child',
     component: ChildComponent
+  },
+  {
+    path: 'ng-http-sample',
+    loadChildren: () => import('./components/ng-http-sample/ng-http-sample.module').then((m) => m.NgHttpSampleModule)
   }
 ];
 
