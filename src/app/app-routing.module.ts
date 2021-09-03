@@ -20,6 +20,10 @@ const routes: Routes = [
   {
     path: 'ng-http-sample',
     loadChildren: () => import('./components/ng-http-sample/ng-http-sample.module').then((m) => m.NgHttpSampleModule)
+  },
+  {
+    path: 'products',
+    loadChildren: () => import('./components/products/products.module').then((m) => m.ProductsModule)
   }
 ];
 
