@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NgHttpSampleComponent } from './ng-http-sample.component';
+
+import { UsersComponent } from './users.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: NgHttpSampleComponent
+    component: UsersComponent
   }
 ];
 
@@ -13,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class NgHttpSampleRoutingModule { }
+export class UsersRoutingModule { }
