@@ -1,0 +1,29 @@
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <form [formGroup]="userForm">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="image" placeholder="https://sample.com/user.png" formControlName="image">
+                    <label for="image">Image</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="first_name" placeholder="Alex" formControlName="first_name">
+                    <label for="first_name">First Name</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="last_name" placeholder="John" formControlName="last_name">
+                    <label for="last_name">Last Name</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="alex@email.com" formControlName="email">
+                    <label for="email">Email</label>
+                </div>
+
+                <a class="btn btn-primary mt-4" (click)="onSave()">Save User</a>
+            </form>
+        </div>
+    </div>
+</div>
