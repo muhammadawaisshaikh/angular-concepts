@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UsersService } from '../users.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class UsersListingComponent implements OnInit {
   user: any = {};
 
   constructor(
-    private users: UsersService
+    private users: UsersService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -26,11 +28,9 @@ export class UsersListingComponent implements OnInit {
     })
   }
 
-  getSingleUser(id: number) {
-    this.users.getUser(id).subscribe(res => {
-      this.user = res;
-      console.log(this.user);
-    })
+  // navigating to view-user with id to consume API call on view-user page 
+  viewUser(_id: number) {
+    this.router.navigate(['/users/view-user'], { queryParams: { id: _id} });
   }
 
   deleteUser(id: number) {

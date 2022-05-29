@@ -1,39 +1,15 @@
 <div class="container-fluid">
     <div class="row">
-      <div class="col-7">
-        <div class="row">
-          <div class="col-3 mt-5" *ngFor="let item of listing.data">
-            <div class="card">
-                <img src="{{item.avatar}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{item.first_name}} {{item.last_name}}</h5>
-                  <p class="card-text">{{item.email}}</p>
-                  <a class="btn btn-success" (click)="getSingleUser(item.id)">See Details</a>
-                  <a class="btn btn-danger ms-2" (click)="deleteUser(item.id)">Delete</a>
-                </div>
-              </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-5">
-        <div class="row justify-content-center my-5" *ngIf="user?.data?.id">
-          <div class="col-6">
-            <div class="card mb-3" style="max-width: 540px;">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="{{user?.data?.avatar}}" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">{{user?.data?.first_name}} {{user?.data?.last_name}}</h5>
-                    <p class="card-text">{{user?.data?.email}}</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
+        <div class="col-3 mt-5" *ngFor="let item of listing.data">
+          <div class="card">
+              <img src="{{item.avatar}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{item.first_name}} {{item.last_name}}</h5>
+                <p class="card-text">{{item.email}}</p>
+                <a class="btn btn-success" (click)="viewUser(item.id)">See Details</a>
+                <a class="btn btn-danger ms-2" (click)="deleteUser(item.id)">Delete</a>
               </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
 </div>
