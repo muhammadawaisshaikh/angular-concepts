@@ -1,0 +1,7 @@
+<h1>Payment Provider</h1>
+
+<button (click)="onSelectPayment(paymentProvider.VISA)">Visa</button>
+<button (click)="onSelectPayment(paymentProvider.CREDIT_CARD)">Credit Card</button>
+<button (click)="onSelectPayment(paymentProvider.CRYPO_CURRENCY)">Crypto Currency</button>
+
+<p>Payment method is selected as : {{selectedPaymentMethod}}</p>
